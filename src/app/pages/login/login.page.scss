@@ -1,0 +1,18 @@
+/* ion-content{
+    --ion-background-color:#021751;
+} */
+ion-footer {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+#img-logo{
+    width: 50%;
+}
+
+#col-logo{
+    width: 100%;
+    background: #021751;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}

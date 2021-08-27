@@ -1,0 +1,55 @@
+#grid-btn{
+    margin-top: 50%;
+    padding: 0px;
+   /*  height: 250px;
+    background-color: orange;
+    background-image: linear-gradient(white, orange);
+    background-size: 250px; */
+}
+
+#col-efect{
+    height: 60%;
+   background: #1093f4;
+}
+
+#col-efect-2{
+   padding: 0px;
+   background: #1093f4;
+}
+
+#img-wave{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+}
+/* .wave1{
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 13%;
+    left: 0;
+    background-image: url(../../../assets/img/wave.svg);
+} */
+
+/* .wave1{
+    animation: w1 7s linear infinite;
+}
+
+@keyframes w1 {
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: -1600px;
+    }
+} */
+
+#buttons{
+    height: 7vh;
+}
+
+#slogan{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: rgb(17, 16, 16);
+}

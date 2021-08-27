@@ -7,11 +7,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Figuras de tus personaje favoritos!</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-slides mode="ios" pager="ios" >
+    <ion-slide>
+      <img src="assets/img/figura1.jpg" style="height: 350px;" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/figura2.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/figura3.jpeg" alt="">
+    </ion-slide>
+  </ion-slides>
+    </ion-card-content>
+  </ion-card>
+  
 </ion-content>

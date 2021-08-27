@@ -1,0 +1,44 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content>
+  <ion-grid style="padding: 0px;">
+    <ion-row>
+      <ion-col size="12">
+        <img src="assets/img/store-logo2.png" alt="">
+      </ion-col>
+    </ion-row>
+    <div id="content-form">
+      <ion-grid >
+        <ion-row>
+          <ion-col size="12">
+            <ion-item class="item-register" lines="full">
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" [(ngModel)]="userModel.email"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-item lines="full">
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-item lines="full">
+              <ion-label position="floating">Confirm Password</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12">
+            <ion-button (click)="registerUser()" expand="block" fill="outline" color="dark">
+              Registrarme
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-grid>
+</ion-content>
