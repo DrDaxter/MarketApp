@@ -1,14 +1,30 @@
-#grid-btn{
+
+
+#col-effect{
+   
+    padding: 0%;
+    margin-bottom: 0%;
+   
+}
+
+#col-base{
+    padding-top: 50px;
+    height: 60vh;
+    background-image: linear-gradient(#1899f5, #1093f4);
+}
+
+#img-wave{
+    position: relative;
+    width: 100%;
+    top: 5%;
+}
+/* #grid-btn{
     margin-top: 50%;
     padding: 0px;
-   /*  height: 250px;
-    background-color: orange;
-    background-image: linear-gradient(white, orange);
-    background-size: 250px; */
 }
 
 #col-efect{
-    height: 60%;
+    height: 45vh;
    background: #1093f4;
 }
 
@@ -21,7 +37,7 @@
     position: absolute;
     width: 100%;
     top: 0%;
-}
+} */
 /* .wave1{
     width: 500%;
     height: 100%;
@@ -48,8 +64,6 @@
     height: 7vh;
 }
 
-#slogan{
-    font-family: 'Lobster', cursive;
-    font-size: 2rem;
-    color: rgb(17, 16, 16);
+#letter{
+    font-family: 'Poppins', sans-serif;
 }

@@ -21,7 +21,7 @@ export class Tab2Page {
 
   logout(){
     this.auth.logout().then(resolve => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/login-menu']);
     });
   }
 

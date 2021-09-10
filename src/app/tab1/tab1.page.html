@@ -1,29 +1,43 @@
-<ion-header [translucent]="true">
+<!-- <ion-header >
   <ion-toolbar>
     <ion-title>
       Tab 1
     </ion-title>
   </ion-toolbar>
-</ion-header>
-
+</ion-header> -->
 <ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Figuras de tus personaje favoritos!</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-slides mode="ios" pager="ios" >
-    <ion-slide>
-      <img src="assets/img/figura1.jpg" style="height: 350px;" alt="">
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/img/figura2.jpg" alt="">
-    </ion-slide>
-    <ion-slide>
-      <img src="assets/img/figura3.jpeg" alt="">
-    </ion-slide>
-  </ion-slides>
-    </ion-card-content>
-  </ion-card>
-  
+  <ion-grid style="margin: 0%; padding: 0%;">
+    <ion-row>
+      <ion-col size="12" style="margin: 0%; padding: 0%;">
+        <ion-item lines="none">
+          <ion-label id="title">Top commerces</ion-label>
+        </ion-item>
+        <ion-slides *ngIf="allCommerces.length" [options]="slideOpts">
+          <ion-slide *ngFor="let commerce of allCommerces">
+            <ion-avatar>
+              <img src="{{commerce.image}}" />
+            </ion-avatar>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="none">
+           <ion-label id="title">NEW SALES</ion-label>
+        </ion-item>
+        <ion-slides loop="true" mode="ios" pager="true" [options]="slideSales">
+          <ion-slide *ngFor="let product of saleProducts">
+            <ion-card style="height: 70vh; width: 400px;">
+              <ion-card-content>
+                <img src="{{product.image}}" alt="banner" id="img-product">
+                <ion-item class="ion-text-center">
+                  <ion-label id="title">{{product.name}}</ion-label>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+      <ion-col size="6"></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
