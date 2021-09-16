@@ -1,0 +1,32 @@
+ion-content{
+    --padding-top:0px;
+}
+
+#img-commerce{
+    width: 100%;
+    height: auto;
+}
+
+ion-card{
+    position: relative;
+    bottom: 20%;
+    margin: 0px;
+    padding: 0px;
+    border-top-left-radius: 40%;
+}
+
+#title{
+    font-family: 'PatrickHand-Regular';
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#sub-title{
+    font-family: 'Poppins-Bold';
+    font-size: 1rem;
+}
+
+ion-item {
+    --background: rgba(0,0,0,0);
+    --border-color: #fff;
+}

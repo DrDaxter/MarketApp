@@ -2,17 +2,35 @@ ion-content{
     --background:url('../../assets/img/home-fond.png') 50%;
 }
 
+/* Transparent standard */
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+}
+
+/* Show background if class is active */
+.show-background {
+    border-style: none;
+    background: var(--ion-color-primary);
+}
+
+
+/* Remove bottom border on ios */
+.header-ios ion-toolbar:last-child {
+    --border-width: 0;
+}
+
 ion-item {
     --background: rgba(0,0,0,0);
     --border-color: #fff;
 }
 
-ion-avatar{
+#top-commerce{
     height: 120px;
     width: 90px;
 }
 
-ion-avatar img{
+#top-commerce img{
     height: 90px;
     width: 90px;
 }
@@ -24,13 +42,13 @@ ion-avatar img{
 }
 
 #sub-title{
-    font-family: 'PatrickHand-Regular';
+    font-family: 'Poppins-Bold';
     font-size: 1rem;
 }
 
-ion-avatar{
+/* ion-avatar{
     height: 10%;
-}
+} */
 
 #img-product{
     width: 100%;

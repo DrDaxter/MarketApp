@@ -14,7 +14,6 @@ ion-toolbar {
     background: var(--ion-color-primary);
 }
 
-
 /* Remove bottom border on ios */
 .header-ios ion-toolbar:last-child {
     --border-width: 0;

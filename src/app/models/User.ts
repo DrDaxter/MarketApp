@@ -5,4 +5,5 @@ export class User{
     emailVerifed:boolean;
     name:string = '';
     lastName:string = '';
+    image:string = '';
 }

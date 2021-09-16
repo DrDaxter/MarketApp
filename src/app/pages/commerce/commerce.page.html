@@ -1,0 +1,50 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      {{commerce.name}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="margin: 0px; padding: 0px;">
+    <ion-row>
+      <ion-col size="12" style="margin: 0px; padding: 0px;">
+        <img src="{{commerce.image}}" alt="commercer" id="img-commerce">
+        <ion-card>
+          <ion-card-content>
+            <ion-list>
+              <ion-list-header>
+                <ion-grid >
+                  <ion-row>
+                    <ion-col size="12" style="margin: 0px; padding: 0px;">
+                      <ion-item lines="none">
+                        <ion-label id="sub-title">Commerce name: {{commerce.name}}</ion-label>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="12" style="margin: 0px; padding: 0px;">
+                      <ion-item lines="none">
+                        <ion-label id="sub-title">Commerce category: {{commerce.category}}</ion-label>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-list-header>
+              <ion-item *ngFor="let product of products">
+                <ion-thumbnail slot="start">
+                  <img src="{{product.image}}">
+                </ion-thumbnail>
+                <ion-label>{{product.name}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

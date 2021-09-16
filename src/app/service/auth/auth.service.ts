@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { User } from '../../models/user';
+import { FirestoreService } from '../firestore/firestore.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class AuthService {
   user = new User();
   constructor(
     private afAuth:AngularFireAuth,
-
+    private firestore: FirestoreService,
   ) { }
 
   public registerWithEmail(email:string,password:string): Promise<any>{
@@ -56,6 +57,18 @@ export class AuthService {
         reject(error);
       });
     });
+  }
+
+  public getUser():Promise<any>{
+    return new Promise((resolve,reject) => {
+      this.afAuth.onAuthStateChanged(user => {
+        this.firestore.getWhere1('user','uid',user.uid).subscribe(res => {
+          resolve(res);
+        });
+      }).catch(error => {
+        reject(error);
+      });
+    })
   }
 
   public logout():Promise<any>{

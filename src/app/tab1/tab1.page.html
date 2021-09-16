@@ -1,10 +1,13 @@
-<!-- <ion-header >
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-avatar>
+        <img src="{{user.image}}" />
+      </ion-avatar>
+      <ion-label id="sub-title" style="margin-left: 10px;">{{user.name}}</ion-label>
+    </ion-buttons>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 <ion-content [fullscreen]="true">
   <ion-grid style="margin: 0%; padding: 0%;">
     <ion-row>
@@ -14,7 +17,7 @@
         </ion-item>
         <ion-slides *ngIf="allCommerces.length" [options]="slideOpts">
           <ion-slide *ngFor="let commerce of allCommerces">
-            <ion-avatar>
+            <ion-avatar id="top-commerce" (click)="goToCommerce(commerce)">
               <img src="{{commerce.image}}" />
             </ion-avatar>
           </ion-slide>
@@ -25,9 +28,15 @@
            <ion-label id="title">NEW SALES</ion-label>
         </ion-item>
         <ion-slides loop="true" mode="ios" pager="true" [options]="slideSales">
-          <ion-slide *ngFor="let product of saleProducts">
-            <ion-card style="height: 70vh; width: 400px;">
+          <ion-slide *ngFor="let product of saleProducts; let index = index">
+            <ion-card style="height: auto; width: 400px;">
               <ion-card-content>
+                <ion-item lines="none" style="margin-bottom: 20px;">
+                  <ion-avatar>
+                    <img src="{{commerceSale[index]['image']}}" alt="">
+                  </ion-avatar>
+                  <ion-label id="sub-title" style="margin-left: 10px;">{{commerceSale[index]['name']}}</ion-label>
+                </ion-item>
                 <img src="{{product.image}}" alt="banner" id="img-product">
                 <ion-item class="ion-text-center">
                   <ion-label id="title">{{product.name}}</ion-label>
