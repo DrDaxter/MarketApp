@@ -1,5 +1,24 @@
+ion-toolbar {
+    --background: transparent !important;
+    --ion-color-base: transparent !important;
+    color: #fff;
+}
+
+ion-title{
+    padding-left: 0px;
+}
+
+#commerce-title{
+    width: auto;
+    /* background: rgba(207, 207, 207, 0.61);   */
+   /*  padding: 10px; */
+    color: #000;
+  /*   border-radius: 100%; */
+}
+
 ion-content{
     --padding-top:0px;
+    position: absolute;
 }
 
 #img-commerce{
@@ -12,12 +31,12 @@ ion-card{
     bottom: 20%;
     margin: 0px;
     padding: 0px;
-    border-top-left-radius: 40%;
+    border-top-left-radius: 30%;
 }
 
 #title{
-    font-family: 'PatrickHand-Regular';
-    font-size: 2rem;
+    font-family: 'Comfortaa-SemiBold';
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -29,4 +48,16 @@ ion-card{
 ion-item {
     --background: rgba(0,0,0,0);
     --border-color: #fff;
+}
+
+#buttton-container{
+    width: 100%;
+    display:inline-block;
+    position:relative;
+}
+
+#buttton-container #btnBack{
+    position: absolute;
+    --background: transparent !important;
+    --ion-color-base: transparent !important;
 }

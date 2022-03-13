@@ -1,12 +1,20 @@
 ion-content{
-    --background:url('../../assets/img/home-fond.png') 50%;
+   /*  --background:url('../../assets/img/home-fond.png') 50%; */
+   --background: #fafafa;
 }
 
-/* Transparent standard */
 ion-toolbar {
-    --background: transparent;
-    --ion-color-base: transparent !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* --background: transparent;
+    --ion-color-base: transparent !important; */
+    /* --background: #1194f4; */
 }
+
+ion-searchbar{
+    padding: 0px;
+}
+
 
 /* Show background if class is active */
 .show-background {
@@ -36,8 +44,8 @@ ion-item {
 }
 
 #title{
-    font-family: 'PatrickHand-Regular';
-    font-size: 2rem;
+    font-family: 'Poppins-Bold';
+    font-size: 1.5rem;
     font-weight: bold;
 }
 

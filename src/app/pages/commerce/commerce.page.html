@@ -1,21 +1,28 @@
-<ion-header >
-  <ion-toolbar>
+<!-- <ion-header>
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-button (click)="goBack()">
-        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-icon src="assets/icon/flecha.svg" ></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
-      {{commerce.name}}
+      <ion-badge color="light" mode="ios"> <ion-label id="sub-title" color="dark">{{commerce.name}}</ion-label></ion-badge>
+     
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content>
+<ion-content fullscreen [scrollEvents]="true">
   <ion-grid style="margin: 0px; padding: 0px;">
     <ion-row>
-      <ion-col size="12" style="margin: 0px; padding: 0px;">
-        <img src="{{commerce.image}}" alt="commercer" id="img-commerce">
+      <ion-col size="12" style="margin: 0px; padding: 0px;" >
+        <div id="buttton-container">
+          <ion-button (click)="goBack()" fill="fill" id="btnBack">
+            <ion-icon src="assets/icon/flecha.svg" ></ion-icon>
+          </ion-button>
+          <img src="{{commerce.image}}" alt="commercer" id="img-commerce">
+        </div>
+       
         <ion-card>
           <ion-card-content>
             <ion-list>
@@ -23,8 +30,8 @@
                 <ion-grid >
                   <ion-row>
                     <ion-col size="12" style="margin: 0px; padding: 0px;">
-                      <ion-item lines="none">
-                        <ion-label id="sub-title">Commerce name: {{commerce.name}}</ion-label>
+                      <ion-item lines="none" class="ion-text-center">
+                        <ion-label id="title">{{ commerce.name }}</ion-label>
                       </ion-item>
                     </ion-col>
                     <ion-col size="12" style="margin: 0px; padding: 0px;">
@@ -35,11 +42,12 @@
                   </ion-row>
                 </ion-grid>
               </ion-list-header>
-              <ion-item *ngFor="let product of products">
+              <ion-item button *ngFor="let product of products" (click)="goToProduct(product.uid)">
                 <ion-thumbnail slot="start">
-                  <img src="{{product.image}}">
+                  <img src="{{product.image}}" alt="{{product.name}}">
                 </ion-thumbnail>
-                <ion-label>{{product.name}}</ion-label>
+                <ion-label id="sub-title">{{product.name}}</ion-label>
+                <!-- <ion-icon name="add-circle" slot="end" color="success" size="large"></ion-icon> -->
               </ion-item>
             </ion-list>
           </ion-card-content>

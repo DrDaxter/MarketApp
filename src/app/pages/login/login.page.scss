@@ -1,22 +1,7 @@
-
-
-ion-footer {
-    --background: transparent;
-    --ion-color-base: transparent !important;
+ion-content{
+    --background: rgb(235, 160, 22);
 }
 
-#col-effect{
-    padding: 0%;
-    margin-bottom: 0%;
-}
-
-#col-base{
-    height: 45vh;
-    background-image: linear-gradient(#1899f5, #1093f4);
-}
-
-#img-wave{
-    position: relative;
+#img-logo{
     width: 100%;
-    top: 10%;
 }

@@ -1,0 +1,26 @@
+ion-content{
+    --background: #FAFAFA;
+}
+#title{
+    font-family: 'Poppins-Bold';
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#sub-title{
+    font-family: 'Poppins-Bold';
+    font-size: 1rem;
+}
+
+#product-img{
+    width: 50%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+#total-product{
+    background: #fff;
+    color: #000;
+    width: 100%;
+    height: 100%;
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../service/auth/auth.service'
-import { NavigationExtras, Router } from '@angular/router'
+import { AuthService } from '../service/auth/auth.service';
+import { NavigationExtras, Router } from '@angular/router';
 import { FirestoreService } from '../service/firestore/firestore.service';
 import { User } from '../models/user';
 
@@ -20,19 +20,19 @@ export class Tab1Page {
     private auth: AuthService,
     private router: Router,
   ) {
-    
+
   }
 
   ngOnInit(){
     this.auth.getUser().then((res) => {
       console.log(res);
       this.user = res[0];
-    })
+    });
   }
 
   ionViewDidEnter() {
     this.loadTopCommerce();
-    this.loadProductsSales(); 
+    this.loadProductsSales();
   }
 
   slideOpts = {
@@ -40,13 +40,13 @@ export class Tab1Page {
     slidesPerView: 4,
     centeredSlides: true,
     speed: 400,
-  }
+  };
 
   slideSales = {
     autoplay: {
       delay:3000
     }
-  }
+  };
 
   loadProductsSales(){
     this.firestore.getWhere1('product','isSale',true).subscribe(res => {
@@ -69,14 +69,14 @@ export class Tab1Page {
 
   goToCommerce(commerce){
     console.log(commerce.name);
-    let params = {
-      'uid':commerce.uid,
-      'name': commerce.name,
-      'category': commerce.category,
-      'image': commerce.image
-    }
+    const params = {
+      uid:commerce.uid,
+      name: commerce.name,
+      category: commerce.category,
+      image: commerce.image
+    };
 
-    let navigationExtras: NavigationExtras = {queryParams: {special: JSON.stringify(params)}};
+    const navigationExtras: NavigationExtras = {queryParams: {special: JSON.stringify(params)}};
     this.router.navigate(['/commerce'],navigationExtras);
   }
 }

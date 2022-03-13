@@ -1,6 +1,6 @@
 import { Component, OnInit,  } from '@angular/core';
-import { Router } from '@angular/router'
-import { AnimationController } from "@ionic/angular"
+import { Router } from '@angular/router';
+import { AnimationController } from '@ionic/angular';
 import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
@@ -9,7 +9,7 @@ import { AnimationOptions } from 'ngx-lottie';
   styleUrls: ['./login-menu.page.scss'],
 })
 export class LoginMenuPage implements OnInit {
-  
+
   options: AnimationOptions = {
     path: './assets/animation/product.json',
   };
@@ -23,7 +23,7 @@ export class LoginMenuPage implements OnInit {
   }
 
   goToLogin(){
-    console.log("click");
+    console.log('click');
     this.route.navigate(['/login']);
   }
 

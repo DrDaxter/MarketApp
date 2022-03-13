@@ -9,8 +9,8 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  password:string;
-  email:string;
+  password: string;
+  email: string;
   constructor(
     private auth: AuthService,
     private router: Router,
@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+
   }
 
   getInWithEmail(){
@@ -29,19 +29,19 @@ export class LoginPage implements OnInit {
         console.log(res); */
         this.router.navigate(['tabs']);
       }else{
-        this.alertLogin("Your email has not been verified => "+res.emailVerified);
+        this.alertLogin('Your email has not been verified => '+res.emailVerified);
         console.log(res);
       }
     }).catch(error => {
-      this.alertLogin("You dont have an acount please register");
+      this.alertLogin('You dont have an acount please register');
     });
   }
 
   async alertLogin(message){
-    let alert = await this.alertController.create({
-      header: "Login messages",
-      message: message,
-      buttons: ["Ok"]
+    const alert = await this.alertController.create({
+      header: 'Login messages',
+      message,
+      buttons: ['Ok']
     });
 
     alert.present();

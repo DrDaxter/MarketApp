@@ -1,33 +1,40 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-</style>
-<ion-header color="transparent">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="goBack()">
-        <ion-icon name="arrow-back-outline" color="dark"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-grid style="margin-bottom: 10%;">
+  <ion-grid>
     <ion-row>
-      <ion-col size="12" class="ion-text-center">
-        <img src="assets/img/logo.jpg" alt="" width="100%">
+      <ion-col size="12">
+        <ion-button (click)="goBack()" fill="fill">
+          <ion-icon name="arrow-back-outline" color="dark" size="large"></ion-icon>
+        </ion-button>
       </ion-col>
-      <ion-col size="12"></ion-col>
+      <ion-col size="12">
+        <img src="assets/img/new-logo.png" alt="logo" id="img-logo">
+      </ion-col>
+      <ion-col size="12" style="margin-top: 10%;">
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="full">
+              <ion-label position="floating" style="font-family: 'Poppins', sans-serif;">Email</ion-label>
+              <ion-input type="email" [(ngModel)]="email"></ion-input>
+            </ion-item>
+
+            <ion-item lines="full">
+              <ion-label position="floating" style="font-family: 'Poppins', sans-serif;">Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+            <br>
+            <br>
+            <ion-button expand="block" color="dark" shape="round" (click)="getInWithEmail()" style="height: 7vh;">
+              <ion-label>Login</ion-label>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
     </ion-row>
   </ion-grid>
+</ion-content>
 
-  <ion-grid style="margin: 0px; padding: 0px;">
-    <ion-row>
-      <ion-col size="12" id="col-effect">
-        <img src="assets/img/multi-wave-2.svg" alt="wave-effect-2" id="img-wave">
-      </ion-col>
-      <ion-col size="12" id="col-base">
-        <ion-card style="border-radius: 15px;">
+
+        <!-- <ion-card style="border-radius: 15px;">
           <ion-card-content>
             <ion-item lines="full">
               <ion-label position="floating" style="font-family: 'Poppins', sans-serif;">Email</ion-label>
@@ -47,14 +54,4 @@
         <br>
         <ion-button expand="block" color="dark" shape="round" (click)="getInWithEmail()" style="height: 7vh;">
           <ion-label>Login</ion-label>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
-
-<!-- <ion-footer >
-  <ion-toolbar>
-    
-  </ion-toolbar>
-</ion-footer> -->
+        </ion-button> -->

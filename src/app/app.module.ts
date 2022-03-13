@@ -14,7 +14,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 //modals
-import { UserPreferencesPageModule } from './pages/user-preferences/user-preferences.module'
+import { UserPreferencesPageModule } from './pages/user-preferences/user-preferences.module';
+import { ProductPageModule } from './pages/product/product.module';
 
 @NgModule({
   schemas: [ CUSTOM_ELEMENTS_SCHEMA  ],
@@ -31,6 +32,7 @@ import { UserPreferencesPageModule } from './pages/user-preferences/user-prefere
   ],
   exports: [
     UserPreferencesPageModule,
+    ProductPageModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
